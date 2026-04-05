@@ -1,4 +1,6 @@
-# confluence-to-kb
+# confluence-to-agent-kb
+
+**Confluence to Agent Knowledge Base**
 
 Turn any Confluence Cloud instance into a private, searchable AI knowledge base on GitHub.
 
@@ -23,12 +25,12 @@ Your Confluence ──► Private GitHub Repos ──► Searchable AI Knowledge
 ## Install
 
 ```bash
-claude skill add jpmim/confluence-to-kb
+claude skill add jpmim/confluence-to-agent-kb
 ```
 
 Or manually:
 ```bash
-git clone https://github.com/jpmim/confluence-to-kb.git ~/.claude/skills/confluence-to-kb
+git clone https://github.com/jpmim/confluence-to-agent-kb.git ~/.claude/skills/confluence-to-agent-kb
 ```
 
 ## Prerequisites
