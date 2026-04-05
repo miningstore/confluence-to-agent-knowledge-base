@@ -319,7 +319,7 @@ Report the compile results: "Compiled {N} pages into {M} wiki articles across {K
 ### Step 4.5: Generate CLAUDE.md
 
 Write a CLAUDE.md for each tier that explains:
-- What this repo is (company KB compiled from Confluence)
+- What this repo is (company Knowledge Base compiled from Confluence)
 - The directory structure (raw/, wiki/, output/)
 - How to search: `ckb search "query"`, read wiki/_summaries.md, read wiki/_index.md
 - How agents contribute: write new .md files to wiki/{category}/ with proper frontmatter
@@ -411,7 +411,7 @@ Use `create_scheduled_task` to set up weekly sync:
 
 - `taskId`: `{company-slug}-kb-weekly-sync`
 - `cronExpression`: `"17 7 * * 1"` (Monday 7:17 AM local)
-- `description`: `"Weekly Confluence sync for {Company} KB repos"`
+- `description`: `"Weekly Confluence sync for {Company} Knowledge Base repos"`
 - `notifyOnCompletion`: `true`
 
 The task prompt should include:

@@ -20,7 +20,7 @@ Your Confluence ──► Private GitHub Repos ──► Searchable AI Knowledge
 3. **Ingest** — Pulls all pages into clean markdown with metadata
 4. **Compile** — Builds a categorized wiki with summaries and indexes
 5. **GitHub** — Creates private repos per tier and pushes
-6. **Auto-Sync** — Sets up weekly sync to keep the KB current
+6. **Auto-Sync** — Sets up weekly sync to keep the Knowledge Base current
 
 ## Install
 
@@ -76,7 +76,7 @@ your-company-kb/
 - `ckb interactive` — Chat-style Q&A session
 - `ckb compile --fast` — Recompile the wiki
 - `ckb lint` — Health checks and quality audit
-- `ckb status` — Show KB stats
+- `ckb status` — Show Knowledge Base stats
 
 ## Why Access Tiers?
 
@@ -85,7 +85,7 @@ Most companies have sensitive content in Confluence that shouldn't be visible to
 - **Sales** spaces with pricing, contracts, client data
 - **HR** spaces with compensation, performance reviews
 
-This skill separates those into different private repos with different GitHub collaborator lists. Everyone gets the general KB, but restricted content stays restricted.
+This skill separates those into different private repos with different GitHub collaborator lists. Everyone gets the general Knowledge Base, but restricted content stays restricted.
 
 ## How It Works Under the Hood
 
@@ -94,7 +94,7 @@ This skill separates those into different private repos with different GitHub co
 - Compiles a **structured wiki** with categories, summaries, and indexes
 - Includes a **TF-IDF search engine** for instant full-text search
 - Sets up **weekly auto-sync** via Claude Code scheduled tasks
-- Each repo includes **CLAUDE.md** so AI agents can read and contribute to the KB
+- Each repo includes **CLAUDE.md** so AI agents can read and contribute to the Knowledge Base
 
 ## Inspired By
 
