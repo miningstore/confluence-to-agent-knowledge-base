@@ -1,0 +1,48 @@
+# {{REPO_NAME}}
+
+{{COMPANY_NAME}} knowledge base — {{TIER_DESCRIPTION}}.
+
+Built from Confluence using [confluence-to-kb](https://github.com/jpmim/confluence-to-kb).
+
+{{ACCESS_NOTE}}
+
+{{TIER_TABLE}}
+
+## Quick Start
+
+```bash
+git clone {{REPO_URL}}
+cd {{REPO_NAME}}
+bash setup.sh
+source venv/bin/activate
+```
+
+## Usage
+
+```bash
+# Search (no API key needed)
+ckb search "your query"
+ckb status
+
+# AI-powered Q&A (needs Claude Pro/Max or ANTHROPIC_API_KEY)
+ckb query "your question"
+ckb interactive
+
+# Recompile wiki
+ckb compile --fast
+```
+
+## Authentication
+
+**Claude Pro/Max** ($20-100/mo): Sign into Claude Code — auth is automatic.
+**Anthropic API key**: `export ANTHROPIC_API_KEY="sk-ant-..."`
+
+## Auto-Sync
+
+Updates weekly from Confluence every Monday morning.
+
+## Contents
+
+{{SPACE_LIST}}
+
+**Total: {{PAGE_COUNT}} pages**

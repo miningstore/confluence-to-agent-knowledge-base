@@ -1,0 +1,73 @@
+# CLAUDE.md - Agent Instructions for {{COMPANY_NAME}} Knowledge Base
+
+## What This Repo Is
+
+This is {{COMPANY_NAME}}'s LLM knowledge base, compiled from Confluence.
+It contains {{PAGE_COUNT}} pages across {{SPACE_COUNT}} Confluence spaces,
+organized into a searchable, queryable wiki.
+
+{{ACCESS_NOTE}}
+
+## Directory Structure
+
+```
+{{REPO_NAME}}/
+  ckb-config.yaml          # Configuration
+  raw/                     # Original markdown pages from Confluence
+  wiki/                    # Compiled knowledge base organized by category
+    _index.md              # Master index - start here
+    _summaries.md          # One-line summary of every page
+{{CATEGORY_TREE}}
+    spaces/                # Per-space summaries
+  output/                  # Q&A answers and reports
+  confluence_kb/           # Python CLI source
+```
+
+## CLI Commands
+
+Activate the environment first:
+```bash
+source venv/bin/activate
+```
+
+| Command | Purpose |
+|---------|---------|
+| `ckb status` | Show KB stats |
+| `ckb search "TERMS"` | Full-text search |
+| `ckb query "QUESTION"` | LLM-powered Q&A (needs API key or Claude Pro/Max) |
+| `ckb compile --fast` | Recompile wiki (heuristic, no LLM) |
+| `ckb compile` | Full LLM recompile |
+| `ckb interactive` | Interactive Q&A session |
+| `ckb lint` | Health checks |
+
+## How to Search
+
+1. Read `wiki/_summaries.md` to scan all pages quickly
+2. Use `ckb search "your query"` for ranked results
+3. Read full articles at `wiki/{category}/{slug}.md`
+4. For complex questions: `ckb query "your question"`
+
+## Agent Contribution Protocol
+
+When you learn new information about {{COMPANY_NAME}}, write it to the wiki:
+
+1. Create `wiki/{category}/{slug}.md` with frontmatter:
+```yaml
+---
+title: "Descriptive Title"
+category: {category}
+compiled_at: "{ISO timestamp}"
+source_page_id: "agent-contributed"
+source_space: AGENT
+---
+```
+
+2. Use clear headers and factual content
+3. Categories: {{CATEGORIES_LIST}}
+4. Mark agent content with `source_space: AGENT`
+5. Do not modify files in `raw/` — only edit `wiki/`
+
+## Authentication
+
+LLM features work automatically in Claude Code (Pro/Max subscription).
+Otherwise set `ANTHROPIC_API_KEY` environment variable.
