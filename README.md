@@ -1,4 +1,4 @@
-# confluence-to-agent-kb
+# confluence-to-agent-knowledge-base
 
 **Confluence to Agent Knowledge Base**
 
@@ -25,12 +25,12 @@ Your Confluence ──► Private GitHub Repos ──► Searchable AI Knowledge
 ## Install
 
 ```bash
-claude skill add jpmim/confluence-to-agent-kb
+claude skill add jpmim/confluence-to-agent-knowledge-base
 ```
 
 Or manually:
 ```bash
-git clone https://github.com/jpmim/confluence-to-agent-kb.git ~/.claude/skills/confluence-to-agent-kb
+git clone https://github.com/jpmim/confluence-to-agent-knowledge-base.git ~/.claude/skills/confluence-to-agent-knowledge-base
 ```
 
 ## Prerequisites

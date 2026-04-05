@@ -1,5 +1,5 @@
 ---
-name: confluence-to-agent-kb
+name: confluence-to-agent-knowledge-base
 description: >
   Turn any Confluence Cloud instance into a private, searchable AI knowledge base
   on GitHub with access-tiered repos. Interactive 6-phase walkthrough using the
@@ -229,7 +229,7 @@ TIER: acme-kb-leadership
 For each tier directory:
 
 1. Copy the Python source from this skill's references directory.
-   Read each file from `~/.claude/skills/confluence-to-agent-kb/references/` and write
+   Read each file from `~/.claude/skills/confluence-to-agent-knowledge-base/references/` and write
    it to the tier directory:
    - `references/confluence_kb/*.py` → `{tier_dir}/confluence_kb/`
    - `references/pyproject.toml` → `{tier_dir}/pyproject.toml`
@@ -237,7 +237,7 @@ For each tier directory:
    - `references/build_sync_state.py` → `{tier_dir}/build_sync_state.py`
 
 2. Copy setup script:
-   - `~/.claude/skills/confluence-to-agent-kb/scripts/setup.sh` → `{tier_dir}/setup.sh`
+   - `~/.claude/skills/confluence-to-agent-knowledge-base/scripts/setup.sh` → `{tier_dir}/setup.sh`
 
 ### Step 4.2: Configure Space-Category Mapping
 
